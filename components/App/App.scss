@@ -1,0 +1,49 @@
+@use '../../colors.scss';
+
+#root {/*
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;*/
+
+  margin: 0;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/*
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+*/
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.app__contener {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.app__workspace {
+  flex: 1 1;
+}

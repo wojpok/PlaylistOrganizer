@@ -1,0 +1,101 @@
+@use '../../colors.scss';
+
+.downloader {
+  padding: 2em;
+}
+
+.downloader__header {
+  display: flex;
+  gap: 2em;
+  
+}
+
+.downloading-step__header {
+  color: colors.$font-secondary-color;
+
+  font-size: 1.4rem;
+}
+
+.downloading-step__header--active {
+  @extend .downloading-step__header;
+
+  color: colors.$font-main-color;
+}
+
+.downloader__progress {
+  text-align: left;
+}
+
+.downloader-step__icon {
+  width: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.downloader-step {
+  display: flex;
+}
+
+.downloader-step__subtext {
+  padding-left: 3em;
+  font-size: 0.9rem;
+}
+
+/*!
+ * three-dots - v0.3.2
+ * CSS loading animations made with single element
+ * https://nzbin.github.io/three-dots/
+ *
+ * Copyright (c) 2018 nzbin
+ * Released under MIT License
+ */
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+ .dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: colors.$secondary-color;
+  color: colors.$secondary-color;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: 0.5s;
+}
+.dot-flashing::before, .dot-flashing::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: colors.$secondary-color;
+  color: colors.$secondary-color;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: colors.$secondary-color;
+  color: colors.$secondary-color;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: colors.$secondary-color;
+  }
+  50%, 100% {
+    background-color: darken(colors.$secondary-color, $amount: 30);
+  }
+}

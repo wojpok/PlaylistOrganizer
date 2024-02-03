@@ -1,0 +1,59 @@
+@use 'sass:color';
+
+$main-color: #ff1400ff;
+$secondary-color: #ff9500ff;
+
+$font-main-color: white;
+$font-secondary-color: #656565ff;
+
+$bg-main-color: #151515ff;
+//$bg-secondary-color: rgb(32, 32, 32);
+$bg-secondary-color: rgb(36, 36, 36);
+
+@mixin fontshadow() {
+  text-shadow: 1px 1px black;
+}
+
+@mixin gradient($start: 0%) {
+  background-color: fade-out($main-color, 0);
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    90deg, 
+    $main-color $start, 
+    $secondary-color 100%,
+  );
+  // var(--shift, color.mix($main-color, $secondary-color, 50%)) 50%, 
+  background-size: 110%;
+  background-position: 10%;
+
+  text-shadow: 1px 1px black;
+
+  &:hover {
+    background-color: $main-color;
+  }
+
+  @include fontshadow();
+}
+
+@mixin responsive($inv: 0) {
+  @if($inv == 0) {
+    background-color: $secondary-color;
+  }
+  @else {
+    background-color: $main-color;
+  }
+  
+
+  transition: 0.09s ease-in-out; 
+
+  &:hover {
+    @if($inv == 1) {
+      background-color: $secondary-color;
+    }
+    @else {
+      background-color: $main-color;
+    }
+  }
+
+  text-shadow: 1px 1px black;
+}

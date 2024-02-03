@@ -1,0 +1,52 @@
+@use '../../colors.scss';
+
+.aligned-buttons {
+  background-color: colors.$bg-secondary-color;
+  border: colors.$secondary-color 1px solid;
+
+  &.reject {
+    @include colors.responsive(0);
+  }
+}
+
+
+.song-entry {
+  background-color: colors.$bg-secondary-color;
+  border-radius: 5px;
+  margin-top: 0.2em;
+
+  align-items: center;
+  display: flex;
+  gap: 2em;
+  overflow: wrap;
+
+  // border: darken(colors.$secondary-color, 30%) 1px solid;
+}
+
+.entry-button-wrapper {
+  margin-left: 0.2em;
+  flex: 0 1 7%;
+}
+
+.entry-title-wrapper {
+  flex: 1 1 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.aligned-buttons {
+  width: 6em;
+}
+
+.entry-artists-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  flex: 1 1 0px;
+}
+
+.entry-artist {
+  color: lighten(colors.$font-secondary-color, 50%);
+  margin-left: 0.2em;
+}
+

@@ -1,0 +1,17 @@
+@use '../../colors.scss';
+.search_bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar__clear {
+  font-size: 1.4rem;
+  width: 3rem;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    color: colors.$main-color;
+  }
+}

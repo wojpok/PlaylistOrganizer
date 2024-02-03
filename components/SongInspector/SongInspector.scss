@@ -1,0 +1,49 @@
+@use '../../colors.scss';
+
+.song-inspector__image {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.song-inspector__wrapper {
+  clear: both;
+}
+
+.song-inspector__title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.song-inspector__artist {
+  text-align: left;
+  font-style: italic;
+}
+
+.song-inspector__release-date {
+  font-size: 1.1rem;
+}
+
+.song-inspector__details {
+  // margin-top: 1rem;
+  font-size: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.song-inspector__section {
+  background-color: colors.$bg-secondary-color;
+  box-sizing: border-box;
+
+  padding: 0.8rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.song-inspector__entry--left {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.song-inspector__entry--right {
+  text-align: left;
+}

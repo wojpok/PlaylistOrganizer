@@ -1,0 +1,16 @@
+@use '../../colors.scss';
+
+
+.grouping-input__order {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.grouping-input__order-option {
+  cursor: pointer;
+
+  &.active {
+    border-bottom: 3px solid colors.$secondary-color;
+  }
+}

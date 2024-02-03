@@ -1,0 +1,21 @@
+@use '../../colors.scss';
+
+.clear-button {
+  font-size: 1.4rem;
+  width: 3rem;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    color: colors.$main-color;
+  }
+}
+
+.clear-button__svg {
+  width: 60%;
+
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(96%) saturate(5500%) hue-rotate(2deg) brightness(100%) contrast(103%);
+  }
+}

@@ -1,0 +1,49 @@
+@use '../../colors.scss';
+
+.screen-lock {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  text-align: center;
+  backdrop-filter: blur(3px);
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  overflow-x: hidden;
+
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.screen-lock-content {
+  background-color: colors.$bg-secondary-color;
+  border-radius: 1em;
+  width: 70vh;
+  box-sizing: border-box;
+  padding: 1em;
+  // border: 1px solid colors.$main-color;
+
+  // box-shadow: 0px 0px 28px 14px colors.$secondary-color;
+  // -webkit-box-shadow: 0px 0px 28px 14px rgba(0,0,0,0.55);
+  // -moz-box-shadow: 0px 0px 28px 14px rgba(0,0,0,0.55);
+  h1 {
+    font-size: 1.7em;
+  }
+
+  @media (max-width: 960px) {
+    width: 90vw;
+
+    h1 {
+      font-size: 1.2em;
+    }
+  }
+
+  
+}

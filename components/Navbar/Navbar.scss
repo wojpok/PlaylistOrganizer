@@ -1,0 +1,24 @@
+@use '../../colors.scss';
+
+.navbar {
+  font-size: 1.2em;
+  border-bottom: colors.$secondary-color solid 2px;
+
+  flex: 0 0 0;
+
+  display: flex;
+  align-items: right;
+
+  box-sizing: border-box;
+  padding: 0.3em;
+
+  background-color: colors.$bg-secondary-color;
+}
+
+.navbar--separator {
+  flex-grow: 10;
+}
+
+.navbar--logout {
+  align-self: baseline
+}

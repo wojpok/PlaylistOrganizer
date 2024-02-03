@@ -1,0 +1,24 @@
+@use '../../colors.scss';
+
+.bucket__wrapper {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: colors.$bg-main-color;
+  margin-top: 1em;
+  z-index: 50;
+}
+
+.bucket {
+  border-top: 2px solid colors.$secondary-color;
+  background-color: colors.$bg-secondary-color;
+  
+  border-radius: 1em 1em 5px 5px;
+  box-sizing: border-box;
+  padding-left: 3em;
+  line-height: 2em;
+
+  font-size: 1.1em;
+  font-weight: 700;
+  font-style: italic;
+}

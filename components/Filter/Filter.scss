@@ -1,0 +1,21 @@
+@use '../../colors.scss';
+
+.slidebar__wrapper {
+  display: flex;
+  align-content: center;
+}
+
+.slidebar__boundary {
+  width: 3rem;
+  text-align: center;
+}
+
+.slidebar__slidear {
+  flex: 1;
+  margin-top: 0.3rem;
+}
+
+.filter__header {
+  display: flex;
+  justify-content: space-between;
+}

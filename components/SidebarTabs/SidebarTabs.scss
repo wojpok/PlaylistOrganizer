@@ -1,0 +1,65 @@
+@use '../../colors.scss';
+
+.sidebar-button {
+  height: 100px; 
+  width: 80px; 
+  display: flex;
+  text-align: center; 
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  border-radius: 0 1rem 1rem 0;
+
+  cursor: pointer;
+  
+  &.activated {
+    @include colors.gradient();
+  }
+}
+
+.sidebar-button__img {
+  width: 50%;
+}
+
+.sidebar-button__img--inactive {
+  @extend .sidebar-button__img;
+
+  filter: invert(15%) sepia(2%) saturate(10%) hue-rotate(340deg) brightness(80%) contrast(77%);
+}
+
+.sidebar-content__contener {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  overflow-y: scroll;
+}
+
+.sidebar-content {
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  height: 90vh;
+}
+
+.sidebar-content__wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar-tab__section {
+  background-color: colors.$bg-secondary-color;
+  box-sizing: border-box;
+
+  padding: 0.8rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar--entry {
+  padding: 1rem;
+}
+
+.sidebar-content__buttons {
+  padding-top: 1rem;
+}

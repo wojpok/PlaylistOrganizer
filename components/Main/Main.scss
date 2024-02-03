@@ -1,0 +1,65 @@
+@use '../../colors.scss';
+
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main--container {
+  display: flex;
+  height: 9vh;
+  flex: 1;
+  width: 100vw;
+  flex-direction: row;
+}
+
+.main--sidebar {
+  //display :none;
+  //border: 10px pink solid;
+  height: 100%;
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 30rem;
+
+  @media (max-width: 960px) {
+    flex-basis: initial;
+  }
+}
+
+.main--workspace {
+  height: 100%;
+  width: 1vw;
+  display: flex;
+
+  flex-shrink: 0;
+
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  flex-grow: 1;
+}
+
+.sidebar--entry {
+  box-sizing: border-box;
+
+  @media (max-width: 960px) {
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 80px;
+
+    height: 100vh;
+    width: calc(100vw - 80px);
+
+    background-color: colors.$bg-main-color;
+    z-index: 100;
+    overflow-y: scroll;
+  }
+}
